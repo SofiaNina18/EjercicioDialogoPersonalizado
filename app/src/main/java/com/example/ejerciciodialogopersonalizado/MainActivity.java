@@ -1,4 +1,10 @@
 package com.example.ejerciciodialogopersonalizado;
+//
+//FOto nombre, tipo,
+//tres botones agua , electrico, fuego y cargarlo desde la base de datos
+//boton administrador que lleva a una ventana de crear
+//sobre clcick donde los personajes long click lleva nuevas activitys este caso Modificar
+//y doble click eliminar
 
 import android.os.Bundle;
 
