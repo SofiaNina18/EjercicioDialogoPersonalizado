@@ -6,8 +6,12 @@ package com.example.ejerciciodialogopersonalizado;
 //sobre clcick donde los personajes long click lleva nuevas activitys este caso Modificar
 //y doble click eliminar
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,7 +22,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    private Button btnAdministrador;
+    private ListView lvPersonajes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,5 +35,25 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    btnAdministrador = findViewById(R.id.btnAdministrador);
+    btnAdministrador.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getApplicationContext(), CrearActivity.class);
+            startActivity(intent);
+        }
+    });
+
+    lvPersonajes = findViewById(R.id.lvPersonajes);
+    lvPersonajes.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+        @Override
+        public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+            Intent intent = new Intent(getApplicationContext(), ModificarActivity.class);
+            startActivity(intent);
+            return true;
+        }
+    });
+
     }
+
 }
