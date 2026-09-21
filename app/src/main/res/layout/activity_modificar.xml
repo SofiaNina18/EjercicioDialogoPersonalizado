@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Crear Nuevo Personaje"
+        android:text="Modificar Personaje"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -70,10 +70,10 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btnNuevoPersonaje"
+            android:id="@+id/btnUpdatePersonaje"
             android:layout_width="154dp"
             android:layout_height="wrap_content"
-            android:text="Crear" />
+            android:text="Modificar" />
     </LinearLayout>
 
 
